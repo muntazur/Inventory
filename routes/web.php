@@ -27,6 +27,29 @@ Route::get('/main',function(){
 	return view('main');
 });
 
+// Add Brand
+Route::post('brand','InventoryController@saveBrand');
 
-//Route::get('ajaxRequest', 'HomeController@ajaxRequest');
-//Route::post('ajaxRequest', 'HomeController@ajaxRequestPost');
+
+// Add category
+Route::post('category','InventoryController@saveCategory');
+
+// Add Brand
+Route::post('product','InventoryController@saveProduct');
+
+//getAllCategory
+Route::get('allcategory','InventoryController@getAllCategoryName');
+
+//get categories table
+Route::get('get_categories','InventoryController@getCategories');
+
+// get brands table
+Route::get('get_brands','InventoryController@getBrands');
+
+
+//get products table
+Route::get('get_products','InventoryController@getProducts');
+
+
+
+
